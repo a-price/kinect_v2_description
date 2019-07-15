@@ -4,7 +4,7 @@
   <arg
     name="gui"
     default="True" />
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find kinect_v2)/urdf/kinect_v2_standalong.urdf.xacro'" />
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find kinect_v2)/urdf/kinect_v2_standalone.urdf.xacro'" />
 
   <param
     name="use_gui"

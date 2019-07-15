@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <robot name="kinect_v2" xmlns:xacro="http://ros.org/wiki/xacro">
 <xacro:include filename="$(find kinect_v2)/urdf/kinect_v2.gazebo.xacro" />
-    <property name="M_PI" value="3.14159" />
+    <xacro:property name="M_PI" value="3.1415926536" />
 
     <!-- Kinect2 and mount assembly -->
     <xacro:macro name="kinect_v2" params=" parent *origin">
         <joint name="kinect2_joint" type="fixed">
-            <insert_block name="origin" />
+            <xacro:insert_block name="origin" />
             <parent link="${parent}" />
             <child link="kinect2_base_link" />
         </joint>
@@ -19,16 +19,16 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://dhbot_description/meshes/kinect2.STL" />
+                    <mesh filename="package://kinect_v2/meshes/kinect2.stl" />
                 </geometry>
                 <material name="">
-                    <color rgba="0.5 0.5 0.5 1" />
+                    <color rgba="0.25 0.25 0.25 1" />
                 </material>
             </visual>
             <collision>
-                <origin xyz="0 0 0" rpy="0 0 0" />
+                <origin xyz="-0.0268 0.0 0.03225" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://dhbot_description/meshes/kinect2.STL" />
+                    <box size="0.1176 0.25 0.0645"/>
                 </geometry>
             </collision>
         </link>
