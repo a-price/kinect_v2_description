@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(kinect_v2)
+project(kinect_v2_description)
 
 find_package(catkin REQUIRED)
 

@@ -1,5 +1,5 @@
 <package>
-  <name>kinect_v2</name>
+  <name>kinect_v2_description</name>
   <version>1.0.0</version>
   <description>
     <p>URDF Description package for kinect_v2</p>
